@@ -19,7 +19,7 @@
 	
 	<link rel="stylesheet" type="text/css" href="Bootstrap-3.3.6/css/bootstrap.css"/>
 	<link rel="stylesheet" type="text/css" href="DataTables-1.10.11/css/dataTables.bootstrap.css"/>
-	<link rel="stylesheet" type="text/css" href="DataTables-1.10.11/css/jquery.dataTables.min.css"/>
+	<link rel="stylesheet" type="text/css" href="DataTables-1.10.11/css/jquery.dataTables.css"/>
 	 
 
 
@@ -29,15 +29,12 @@
 		  /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. 
 		   Change if height of navigation changes. */
 		  padding-top: 70px;
+		  font-family: Verdana, Geneva, sans-serif;
 		  font-size: 16px;
 		}
-
-		.small {
-		  font-size: 12px; /* 75% of the baseline */
-		}
-
-		.large {
-		  font-size: 20px; /* 125% of the baseline */
+		
+		.table {
+		  font-size: 85%;
 		}
 		
     </style>
@@ -77,10 +74,10 @@
                         <a href="#">Overview</a>
                     </li>
                     <li>
-                        <a href="#">Dashboard</a>
+                        <a href="#Dashboard">Dashboard</a>
                     </li>
                     <li>
-                        <a href="#">Our Team</a>
+                        <a href="#Team">Our Team</a>
                     </li>
                 </ul>
             </div>
@@ -94,28 +91,32 @@
         <div class="row">
             <div class="col-lg-12 text-left">
 				<br>
-                
-				<p class="lead">You’ve tried that open source project that everyone is talking about and you are convinced that it is exactly what you need. But how to get buy-in from other stakeholders in your company? Bazaar to the rescue!
+                <h1>Bazaar</h1>
+				<p class="lead">You’ve tried that open source project that everyone is talking about and you are convinced that it is exactly what you need. 
+				But how to get buy-in from other stakeholders in your company? Bazaar to the rescue!
 				
-				<b>Bazaar is a data-driven tool to research open source projects</b></p>
-				<p class="lead">We developed a set of data-driven metrics about open source projects that will help you determine if a project is stable, if it has a growing community that supports it, and if development is likely to continue. 
+				<b> Bazaar is a data-driven tool to research open source projects.</b></p>
+				<p >We developed a set of data-driven metrics about open source projects that will help you determine if a project is stable, if it has a growing community that supports it, and if development is likely to continue. 
 				Our unbiased metrics will help you and your team decide whether that open source project is the right choice or not.</p>
-				<p class="lead">Don’t have an open source project in mind? No problem, explore our dashboard to find projects and see how they compare to others. You might even discover a great project and be the first one to start talking about it.</p>
+				<p >Don’t have an open source project in mind? No problem, explore our dashboard to find projects and see how they compare to others. 
+				You might discover the next great project and become the first one to talk about it.</p>
             </div>
         </div>
         <!-- /.row -->
     </div>
     <!-- /.container -->
 	
-	<div class="container">
+	<div id="Dashboard" class="container">
         <div class="row">
             <div class="col-lg-12 text-left">
 				<h1>Dashboard</h1>
-                <h3>Rate of Issues</h3>
-				</p>When talking about open source projects, one of the first topics that comes up is software support. Because you don't have service agreement, 
-				knowing in advance if problems and bugs get solved is a priority. So in our beta version we are focusing on issue resolution.
-				
-				</p>
+				</p>When discussing whether to use open source software in production settings, one of the first topics to come up is software support. 
+				Because you don't have a service agreement that guarantees ongoing support, it is important to 
+				know in advance if the project has a good track record of addressing problems and fixing bugs.</p> 
+                <p>Issue resolution is the focus of out beta version. Below are our key metrics.</p>
+			</div>
+			<div class="col-lg-12 text-left">
+				<h3>Rate of Issues</h3>
 				<br>
                 <table id="example" class="table hover table-bordered" cellspacing="0" width="100%">
 
@@ -148,13 +149,17 @@
 						</tr>
 					</thead>
 				</table>
+			</div>
+			<div class="col-lg-12 text-left">	
+				<h3>Unique Actors Score</h3>
+				<br>
             </div>
         </div>
         <!-- /.row -->
     </div>
     <!-- /.container -->
 
-	<div class="container">
+	<div id="Team" class="container">
         <div class="row">
             <div class="col-lg-12 text-left">
                 <h1>Our Team</h1>
