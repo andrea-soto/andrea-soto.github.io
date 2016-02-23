@@ -220,6 +220,7 @@
 	$(document).ready(function() {
 		$('#example').DataTable( {
 			data: issueRateData,
+			order: [[ 1, "desc" ]],
 			columnDefs: [
             { 	render: function ( data, type, row ) {
                     return Number(data).toFixed(2);
