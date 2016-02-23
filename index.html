@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Bazaar Beta</title>
+	
+	<!-- DataTables with Bootstrap -->
+	<script type="text/javascript" src="jQuery-1.12.0/jquery-1.12.0.js"></script>
+	<script type="text/javascript" src="Bootstrap-3.3.6/js/bootstrap.js"></script>
+	<script type="text/javascript" src="DataTables-1.10.11/js/jquery.dataTables.js"></script>
+	<script type="text/javascript" src="DataTables-1.10.11/js/dataTables.bootstrap.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="Bootstrap-3.3.6/css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="DataTables-1.10.11/css/dataTables.bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="DataTables-1.10.11/css/jquery.dataTables.min.css"/>
+	 
+
+
+    <!-- Custom CSS -->
+    <style>
+		body {
+		  /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. 
+		   Change if height of navigation changes. */
+		  padding-top: 70px;
+		  font-size: 16px;
+		}
+
+		.small {
+		  font-size: 12px; /* 75% of the baseline */
+		}
+
+		.large {
+		  font-size: 20px; /* 125% of the baseline */
+		}
+		
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	
+	<script src="./data/issueRateData.js"></script>
+
+</head>
+
+	
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Bazaar Beta</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">Overview</a>
+                    </li>
+                    <li>
+                        <a href="#">Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="#">Our Team</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-left">
+				<br>
+                
+				<p class="lead">You’ve tried that open source project that everyone is talking about and you are convinced that it is exactly what you need. But how to get buy-in from other stakeholders in your company? Bazaar to the rescue!
+				
+				<b>Bazaar is a data-driven tool to research open source projects</b></p>
+				<p class="lead">We developed a set of data-driven metrics about open source projects that will help you determine if a project is stable, if it has a growing community that supports it, and if development is likely to continue. 
+				Our unbiased metrics will help you and your team decide whether that open source project is the right choice or not.</p>
+				<p class="lead">Don’t have an open source project in mind? No problem, explore our dashboard to find projects and see how they compare to others. You might even discover a great project and be the first one to start talking about it.</p>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+	
+	<div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-left">
+				<h1>Dashboard</h1>
+                <h3>Rate of Issues</h3>
+				</p>When talking about open source projects, one of the first topics that comes up is software support. Because you don't have service agreement, 
+				knowing in advance if problems and bugs get solved is a priority. So in our beta version we are focusing on issue resolution.
+				
+				</p>
+				<br>
+                <table id="example" class="table hover table-bordered" cellspacing="0" width="100%">
+
+					<thead >
+						<tr>
+							<th rowspan="2" class="dt-center">Repository Name</th>
+							<th colspan="9" class="dt-center">Weekly Issues Created</th>
+							<th colspan="9" class="dt-center">Weekly Issues Closed</th>
+						</tr>
+						<tr>
+							<th>Average Rate</th>
+							<th>Std</th>
+							<th>Min</th>
+							<th>25% Quartile</th>
+							<th>50% Quartile</th>
+							<th>75% Quartile</th>
+							<th>Max</th>
+							<th>Non-Zero Weeks</th>
+							<th>Active Weeks (%)</th>
+							
+							<th>Average Rate</th>
+							<th>Std</th>
+							<th>Min</th>
+							<th>25% Quartile</th>
+							<th>50% Quartile</th>
+							<th>75% Quartile</th>
+							<th>Max</th>
+							<th>Non-Zero Weeks</th>
+							<th>Active Weeks (%)</th>
+						</tr>
+					</thead>
+				</table>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+
+	<div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-left">
+                <h1>Our Team</h1>
+                <ul class="list-unstyled">
+                    <li>Bootstrap v3.3.6</li>
+                    <li>jQuery v1.11.1</li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+	
+</body>
+	<!--
+	<script>
+	/*	 
+	// Use with plainArrayData by importing <script src="./data/ampleDataFormat.js"></script>
+	$(document).ready(function() {
+		$('#example').DataTable( {
+			data: plainArrayData,
+			columns: [
+				{ title: "Name" },
+				{ title: "Position" },
+				{ title: "Office" },
+				{ title: "Extn." },
+				{ title: "Start date" },
+				{ title: "Salary" }
+			]
+		} );
+	} );
+	
+	// Use with jsonArrayData by importing <script src="./data/ampleDataFormat.js"></script>
+	$(document).ready(function() {
+		$('#example').DataTable( {
+			data: jsonArrayData,
+			columns: [
+				{ title: "Name", data: null, 
+				  render: function (data) {
+                            // Combine the first and last names into a single table field
+                            return data.first_name+' '+data.last_name;  } 
+				},
+				{ title: "Position", data: "position" },
+				{ title: "Office", data: "office" },
+				{ title: "Extn.", data: "extn" },
+				{ title: "Start date", data: "start_date" },
+				{ title: "Salary", data: "salary" }
+			]
+		} );
+	} );
+	*/
+	</script>
+	-->
+	
+	<script> 
+
+	$(document).ready(function() {
+		$('#example').DataTable( {
+			data: issueRateData,
+			columnDefs: [
+            { 	render: function ( data, type, row ) {
+                    return Number(data).toFixed(2);
+				},
+                targets: [1,9,10,-1]
+            },
+			{	visible: false, targets: [2,4,5,6,8,11,13,14,15,17]}]
+		} );
+	} );
+	</script>
+</html>
+
+
